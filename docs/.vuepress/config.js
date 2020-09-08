@@ -21,9 +21,9 @@ module.exports = {
       { text: '首页', link: '/'},
       { text: '基础', link: '/base/',
         items: [
-            {text: 'Html&Css', link: '/pages/48fd37/'}, 
-            {text: 'Javascript', link: '/pages/9cf891/'},
-            {text: 'Typescript', link: '/pages/da5ba4/'}, 
+            {text: 'HTML', link: '/pages/fd29b6/'}, 
+            {text: 'CSS', link: '/pages/48fd37/'}, 
+            {text: 'JS', link: '/pages/9cf891/'},
         ]
       },
       { text: '框架',link: '/framework/',
