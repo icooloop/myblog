@@ -23,36 +23,41 @@ module.exports = {
         text: '基础',
         link: '/base/',
         items: [
-            {text: 'css', link: '/pages/ts1/'}, 
-            {text: 'js基础', link: '/pages/es1/'},
-            {text: 'es6', link: '/pages/es1/'},
+            {text: 'Css', link: '/pages/ts1/'}, 
+            {text: 'Js基础', link: '/pages/es1/'},
+            {text: 'Es6', link: '/pages/es1/'},
+            {text: 'Typescript', link: '/pages/ts1/'}, 
         ]
       },
       {
         text: '框架',
         link: '/framework/',
         items: [
-          {text: 'vue', link: '/pages/ts1/'}, 
-          {text: 'react', link: '/pages/es1/'},
+          {text: 'Vue', link: '/pages/ts1/'}, 
+          {text: 'React', link: '/pages/es1/'},
+          {text: '移动端', link: '/pages/es1/'},
+          {text: 'Node', link: '/pages/ts1/'}, 
         ]
       },
       {
         text: '进阶',
         link: '/advanced/',
         items: [
-          {text: 'node', link: '/pages/ts1/'}, 
+          {text: '工程化与构建', link: '/pages/es1/'},
           {text: '性能优化', link: '/pages/es1/'},
-          {text: '算法', link: '/pages/es1/'},
+          {text: '数据结构与算法', link: '/pages/es1/'},
           {text: '网络与安全', link: '/pages/es1/'},
+          {text: '可视化与图形学', link: '/pages/es1/'},
         ]
       },
       {
         text: '更多',
         link: '/more/',
         items: [
-          {text: '学习', link: '/pages/ts1/'}, 
-          {text: '面试', link: '/pages/es1/'},
-          {text: '工具', link: '/pages/es1/'},
+          {text: '学习方法', link: '/pages/ts1/'}, 
+          {text: '面试总结', link: '/pages/es1/'},
+          {text: '实用工具', link: '/pages/es1/'},
+          {text: '项目总结', link: '/pages/es1/'},
         ]
       },
       {
