@@ -1,5 +1,3 @@
-const nav = require('./config/nav.js');
-
 module.exports = {
   title: "子恒的博客",
   description: 'web前端技术博客,简洁至上,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github等技术文章。', // 描述,以 <meta> 标签渲染到页面html中
@@ -19,10 +17,66 @@ module.exports = {
   // theme: require.resolve('../../theme-vdoing'), // 使用本地主题
 
   themeConfig: { // 主题配置
-    nav,
+    nav:[
+      {text: '首页', link: '/'},
+      {
+        text: '基础',
+        link: '/base/',
+        items: [
+            {text: 'css', link: '/pages/ts1/'}, 
+            {text: 'js基础', link: '/pages/es1/'},
+            {text: 'es6', link: '/pages/es1/'},
+        ]
+      },
+      {
+        text: '框架',
+        link: '/framework/',
+        items: [
+          {text: 'vue', link: '/pages/ts1/'}, 
+          {text: 'react', link: '/pages/es1/'},
+        ]
+      },
+      {
+        text: '进阶',
+        link: '/advanced/',
+        items: [
+          {text: 'node', link: '/pages/ts1/'}, 
+          {text: '性能优化', link: '/pages/es1/'},
+          {text: '算法', link: '/pages/es1/'},
+          {text: '网络与安全', link: '/pages/es1/'},
+        ]
+      },
+      {
+        text: '更多',
+        link: '/more/',
+        items: [
+          {text: '学习', link: '/pages/ts1/'}, 
+          {text: '面试', link: '/pages/es1/'},
+          {text: '工具', link: '/pages/es1/'},
+        ]
+      },
+      {
+        text: '收藏',
+        link: '/pages/beb6c0bd8a66cea6/',
+        items: [
+          {text: '网站', link: '/pages/beb6c0bd8a66cea6/'},
+          {text: '资源', link: '/pages/eee83a9211a70f9d/'},
+          {text: 'Vue资源', link: '/pages/12df8ace52d493f6/'},
+        ]
+      },
+      {
+        text: '索引',
+        link: '/archives/',
+        items: [
+          {text: '分类', link: '/categories/'},
+          {text: '标签', link: '/tags/'},
+          {text: '归档', link: '/archives/'},
+        ]
+      }
+    ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.jpg', // 导航栏logo
-    repo: 'icooloop/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+    repo: false, // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
@@ -60,7 +114,7 @@ module.exports = {
     sidebar: 'structuring', // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
 
     author: { // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
-      name: 'icooloop', // 必需
+      name: '子恒', // 必需
       link: 'https://github.com/icooloop' // 可选的
     },
     blogger: { // 博主信息，显示在首页侧边栏

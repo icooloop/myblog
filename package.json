@@ -25,6 +25,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "nodemon": "^2.0.4",
     "vuepress-plugin-comment": "^0.7.3"
   }
 }
