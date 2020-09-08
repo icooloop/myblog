@@ -18,10 +18,8 @@ module.exports = {
 
   themeConfig: { // 主题配置
     nav:[
-      {text: '首页', link: '/'},
-      {
-        text: '基础',
-        link: '/base/',
+      { text: '首页', link: '/'},
+      { text: '基础', link: '/base/',
         items: [
             {text: 'Css', link: '/pages/ts1/'}, 
             {text: 'Js基础', link: '/pages/es1/'},
@@ -29,9 +27,7 @@ module.exports = {
             {text: 'Typescript', link: '/pages/ts1/'}, 
         ]
       },
-      {
-        text: '框架',
-        link: '/framework/',
+      { text: '框架',link: '/framework/',
         items: [
           {text: 'Vue', link: '/pages/ts1/'}, 
           {text: 'React', link: '/pages/es1/'},
@@ -39,9 +35,7 @@ module.exports = {
           {text: 'Node', link: '/pages/ts1/'}, 
         ]
       },
-      {
-        text: '进阶',
-        link: '/advanced/',
+      { text: '进阶',link: '/advanced/',
         items: [
           {text: '工程化与构建', link: '/pages/es1/'},
           {text: '性能优化', link: '/pages/es1/'},
@@ -50,9 +44,7 @@ module.exports = {
           {text: '可视化与图形学', link: '/pages/es1/'},
         ]
       },
-      {
-        text: '更多',
-        link: '/more/',
+      { text: '更多',link: '/more/',
         items: [
           {text: '学习方法', link: '/pages/ts1/'}, 
           {text: '面试总结', link: '/pages/es1/'},
@@ -60,18 +52,14 @@ module.exports = {
           {text: '项目总结', link: '/pages/es1/'},
         ]
       },
-      {
-        text: '收藏',
-        link: '/pages/beb6c0bd8a66cea6/',
+      { text: '收藏',link: '/pages/beb6c0bd8a66cea6/',
         items: [
           {text: '网站', link: '/pages/beb6c0bd8a66cea6/'},
           {text: '资源', link: '/pages/eee83a9211a70f9d/'},
           {text: 'Vue资源', link: '/pages/12df8ace52d493f6/'},
         ]
       },
-      {
-        text: '索引',
-        link: '/archives/',
+      { text: '索引',link: '/archives/',
         items: [
           {text: '分类', link: '/categories/'},
           {text: '标签', link: '/tags/'},
