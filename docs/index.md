@@ -2,7 +2,7 @@
 home: true
 # heroImage: /img/web.png
 heroText: 子恒的博客
-tagline: 道阻且长,行则将至
+tagline: 道阻且长，行则将至
 # actionText: 立刻进入 →
 # actionLink: /web/
 bannerBg:  /img/banner.jpg
