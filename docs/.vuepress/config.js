@@ -52,10 +52,9 @@ module.exports = {
           {text: '项目', link: '/pages/1a6e53/'},
         ]
       },
-      { text: '收藏',link: '/pages/beb6c0bd8a66cea6/',
+      { text: '收藏',link: '/pages/8931cb/',
         items: [
-          {text: '网站', link: '/pages/beb6c0bd8a66cea6/'},
-          {text: '资源', link: '/pages/eee83a9211a70f9d/'},
+          {text: '网址收藏', link: '/pages/8931cb/'},
           {text: 'Vue资源', link: '/pages/12df8ace52d493f6/'},
         ]
       },
