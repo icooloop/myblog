@@ -19,43 +19,36 @@ module.exports = {
   themeConfig: { // 主题配置
     nav:[
       { text: '首页', link: '/'},
-      { text: '基础', link: '/base/',
+      { text: '前端基础', link: '/base/',
         items: [
             {text: 'HTML', link: '/pages/fd29b6/'}, 
             {text: 'CSS', link: '/pages/48fd37/'}, 
             {text: 'JS', link: '/pages/9cf891/'},
         ]
       },
-      { text: '框架',link: '/framework/',
+      { text: '前端框架',link: '/framework/',
         items: [
           {text: 'Vue', link: '/pages/04224b/'}, 
           {text: 'React', link: '/pages/6c9200/'},
+          {text: '跨平台', link: '/pages/98fed5/'},
           {text: 'Node', link: '/pages/1280b2/'}, 
-          {text: '移动端', link: '/pages/98fed5/'},
         ]
       },
-      { text: '进阶',link: '/advanced/',
+      { text: '前端进阶',link: '/advanced/',
         items: [
           {text: '工程化与构建', link: '/pages/a406b4/'},
           {text: '性能优化', link: '/pages/d58867/'},
           {text: '网络与安全', link: '/pages/83f5d1/'},
           {text: '数据结构与算法', link: '/pages/af1570/'},
-          {text: '设计模式', link: '/pages/7c4cf6/'},
-          {text: '可视化与图形学', link: '/pages/11eadf/'},
+          {text: '其他', link: '/pages/7c4cf6/'},
         ]
       },
       { text: '更多',link: '/more/',
         items: [
-          {text: '学习', link: '/pages/f2a556/'}, 
-          {text: '面试', link: '/pages/aea6571b7a8bae86/'},
-          {text: '工具', link: '/pages/27906c/'},
-          {text: '项目', link: '/pages/1a6e53/'},
-        ]
-      },
-      { text: '收藏',link: '/pages/8931cb/',
-        items: [
           {text: '网址收藏', link: '/pages/8931cb/'},
-          {text: 'Vue资源', link: '/pages/12df8ace52d493f6/'},
+          {text: '学习方法', link: '/pages/f2a556/'}, 
+          {text: '面试总结', link: '/pages/aea6571b7a8bae86/'},
+          {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
         ]
       },
       { text: '索引',link: '/archives/',
