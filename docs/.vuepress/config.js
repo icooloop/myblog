@@ -31,7 +31,7 @@ module.exports = {
         items: [
           {text: 'Vue', link: '/pages/04224b/'}, 
           {text: 'React', link: '/pages/6c9200/'},
-          {text: '跨平台', link: '/pages/98fed5/'},
+          {text: '泛客户端', link: '/pages/98fed5/'},
           {text: 'Node', link: '/pages/1280b2/'}, 
         ]
       },
