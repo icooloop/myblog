@@ -25,7 +25,7 @@ module.exports = {
             {text: 'HTML', link: '/pages/fd29b6/'}, 
             {text: 'CSS', link: '/pages/48fd37/'}, 
             {text: 'JS', link: '/pages/9cf891/'},
-            {text: '网络', link: '/pages/83f5d1/'},
+            {text: '网络', link: '/pages/a45314/'},
         ]
       },
       { text: '前端框架',link: '/framework/',

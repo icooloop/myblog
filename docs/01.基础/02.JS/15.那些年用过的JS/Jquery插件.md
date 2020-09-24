@@ -1,5 +1,5 @@
 ---
-title: 那些年用过的jquery插件
+title: 那些年用过的JS/jquery插件
 date: 2020-09-09 13:17:40
 permalink: /pages/f6bb71/
 categories: 
@@ -11,16 +11,18 @@ tags:
 		
 名称|用途|详情链接
 ---|--|---
+lodash | 工具库 | [https://www.lodashjs.com/docs/lodash.compact](https://www.lodashjs.com/docs/lodash.compact)
 layer | web弹出层	| [http://layer.layui.com/](http://layer.layui.com/)
 laydate |	日期与时间控件 |	[http://www.layui.com/laydate/](http://www.layui.com/laydate/)
 swiper |	滑动 |	[https://www.swiper.com.cn/](https://www.swiper.com.cn/)
 pagination |	分页插件 |	[http://www.jq22.com/jquery-info5697](http://www.jq22.com/jquery-info5697)
 lazyload |	延迟加载 |	[http://www.jq22.com/jquery-info390](http://www.jq22.com/jquery-info390)
-superslide2 |	轮播、滚动、切换 |	[http://www.superslide2.com/http://www.superslide2.com/]()
+superslide2 |	轮播、滚动、切换 |	[http://www.superslide2.com/](http://www.superslide2.com/)
 fullpage |	全屏滚动 |	[http://www.dowebok.com/77.html](http://www.dowebok.com/77.html)
 echarts |	百度图表控件 |	[http://echarts.baidu.com/](http://echarts.baidu.com/)
 highcharts |	图表控件 |	[http://www.hcharts.cn/](http://www.hcharts.cn/)
 moment |	日期处理 |	[http://momentjs.cn/](http://momentjs.cn/)
+Day |	日期处理 |	[https://day.js.org/zh-CN/](https://day.js.org/zh-CN/)
 wow |	让页面滚动更有趣 |	[http://www.dowebok.com/131.html](http://www.dowebok.com/131.html)
 headroom |	隐藏或展示页面元素 |	[http://www.bootcss.com/p/headroom.js/](http://www.bootcss.com/p/headroom.js/)
 zeroclipboard |	复制到粘贴板 |	[http://code.ciaoca.com/javascript/zeroclipboard/](http://code.ciaoca.com/javascript/zeroclipboard/)
