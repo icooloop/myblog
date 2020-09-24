@@ -25,6 +25,7 @@ module.exports = {
             {text: 'HTML', link: '/pages/fd29b6/'}, 
             {text: 'CSS', link: '/pages/48fd37/'}, 
             {text: 'JS', link: '/pages/9cf891/'},
+            {text: '网络', link: '/pages/83f5d1/'},
         ]
       },
       { text: '前端框架',link: '/framework/',
@@ -32,14 +33,13 @@ module.exports = {
           {text: 'Vue', link: '/pages/04224b/'}, 
           {text: 'React', link: '/pages/6c9200/'},
           {text: '泛客户端', link: '/pages/98fed5/'},
-          {text: 'Node', link: '/pages/1280b2/'}, 
         ]
       },
       { text: '前端进阶',link: '/advanced/',
         items: [
+          {text: 'Node', link: '/pages/1280b2/'}, 
           {text: '工程化与构建', link: '/pages/a406b4/'},
           {text: '性能优化', link: '/pages/d58867/'},
-          {text: '网络与安全', link: '/pages/83f5d1/'},
           {text: '数据结构与算法', link: '/pages/af1570/'},
           {text: '其他', link: '/pages/7c4cf6/'},
         ]
