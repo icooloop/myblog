@@ -41,15 +41,16 @@ module.exports = {
           {text: '工程化与构建', link: '/pages/a406b4/'},
           {text: '性能优化', link: '/pages/d58867/'},
           {text: '数据结构与算法', link: '/pages/af1570/'},
+          {text: '可视化与图形学', link: '/pages/244682/'},
           {text: '其他', link: '/pages/7c4cf6/'},
         ]
       },
       { text: '更多',link: '/more/',
         items: [
-          {text: '网址收藏', link: '/pages/8931cb/'},
-          {text: '学习方法', link: '/pages/f2a556/'}, 
-          {text: '面试总结', link: '/pages/aea6571b7a8bae86/'},
-          {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
+          {text: '收藏', link: '/pages/8931cb/'},
+          {text: '学习', link: '/pages/f2a556/'}, 
+          {text: '面试', link: '/pages/aea6571b7a8bae86/'},
+          {text: '文档', link: '/pages/9a7ee40fc232253e/'},
         ]
       },
       { text: '索引',link: '/archives/',
