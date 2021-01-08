@@ -32,7 +32,7 @@ module.exports = {
         items: [
           {text: 'Vue', link: '/pages/04224b/'}, 
           {text: 'React', link: '/pages/6c9200/'},
-          {text: '泛客户端', link: '/pages/98fed5/'},
+          {text: '其他', link: '/pages/98fed5/'},
         ]
       },
       { text: '进阶',link: '/advanced/',
