@@ -49,6 +49,8 @@ module.exports = {
         items: [
             {text: '手写篇', link: '/pages/b11f45/'},
             {text: '源码篇', link: '/pages/f91319/'},
+            {text: '架构篇', link: '/pages/c9013f/'},
+            {text: '项目篇', link: '/pages/1a6e53/'},
             {text: '面试篇', link: '/pages/aea6571b7a8bae86/'},
         ]
       },
@@ -57,7 +59,6 @@ module.exports = {
           {text: '收藏整理', link: '/pages/8931cb/'},
           {text: '学习方法', link: '/pages/f2a556/'}, 
           {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
-          {text: '项目总结', link: '/pages/1a6e53/'},
           {text: '读书笔记', link: '/pages/a453141/'},
           {text: '友情链接', link: '/friends/' },
         ]
