@@ -143,7 +143,7 @@
         <UpdateArticle
           class="card-box"
           v-if="homeData.postList === 'simple'"
-          :length="5"
+          :length="homeData.simplePostListLength || 10"
         />
 
         <!-- 详情版文章列表 -->
@@ -176,6 +176,7 @@
           :tagsData="$categoriesAndTags.tags"
           :length="30"
         />
+        <div class="custom-html-box card-box" v-if="homeSidebarB" v-html="homeSidebarB"></div>
       </template>
     </MainLayout>
   </div>
@@ -210,6 +211,50 @@ export default {
       total: 0, // 总长
       perPage: 10, // 每页长
       currentPage: 1// 当前页
+    }
+  },
+  computed: {
+    homeSidebarB() {
+      const { htmlModules } = this.$themeConfig
+      return htmlModules ? htmlModules.homeSidebarB : ''
+    },
+    showBanner () { // 当分页不在第一页时隐藏banner栏
+      return this.$route.query.p
+        && this.$route.query.p != 1
+        && (!this.homeData.postList || this.homeData.postList === 'detailed')
+        ? false : true
+    },
+    bannerBgStyle () {
+      let bannerBg = this.homeData.bannerBg
+      if (!bannerBg || bannerBg === 'auto') { // 默认
+        if (this.$themeConfig.bodyBgImg) { // 当有bodyBgImg时，不显示背景
+          return ''
+        } else { // 网格纹背景
+          return 'background: rgb(40,40,45) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVFhH7c6xCQAgDAVRR9A6E4hLu4uLiWJ7tSnuQcIvr2TRYsw3/zOGGEOMIcYQY4gxxBhiDDGGGEOMIcYQY4gxxBhiDLkx52W4Gn1tuslCtHJvL54AAAAASUVORK5CYII=)'
+        }
+      } else if (bannerBg === 'none') { // 无背景
+        if (this.$themeConfig.bodyBgImg) {
+          return ''
+        } else {
+          return 'background: var(--mainBg);color: var(--textColor)'
+        }
+      } else if (bannerBg.indexOf('background') > -1) { // 自定义背景样式
+        return bannerBg
+      } else if (bannerBg.indexOf('.') > -1) { // 大图
+        return `background: url(${this.$withBase(bannerBg)}) center center / cover no-repeat`
+      }
+
+    },
+    homeData () {
+      return {
+        ...this.$page.frontmatter
+      }
+    },
+    actionLink () {
+      return {
+        link: this.homeData.actionLink,
+        text: this.homeData.actionText
+      };
     }
   },
   components: { NavLink, MainLayout, PostList, UpdateArticle, BloggerBar, CategoriesBar, TagsBar, Pagination },
@@ -306,46 +351,6 @@ export default {
     },
   },
 
-  computed: {
-    showBanner () { // 当分页不在第一页时隐藏banner栏
-      return this.$route.query.p
-        && this.$route.query.p != 1
-        && (!this.homeData.postList || this.homeData.postList === 'detailed')
-        ? false : true
-    },
-    bannerBgStyle () {
-      let bannerBg = this.homeData.bannerBg
-      if (!bannerBg || bannerBg === 'auto') { // 默认
-        if (this.$themeConfig.bodyBgImg) { // 当有bodyBgImg时，不显示背景
-          return ''
-        } else { // 网格纹背景
-          return 'background: rgb(40,40,45) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVFhH7c6xCQAgDAVRR9A6E4hLu4uLiWJ7tSnuQcIvr2TRYsw3/zOGGEOMIcYQY4gxxBhiDDGGGEOMIcYQY4gxxBhiDLkx52W4Gn1tuslCtHJvL54AAAAASUVORK5CYII=)'
-        }
-      } else if (bannerBg === 'none') { // 无背景
-        if (this.$themeConfig.bodyBgImg) {
-          return ''
-        } else {
-          return 'background: var(--mainBg);color: var(--textColor)'
-        }
-      } else if (bannerBg.indexOf('background') > -1) { // 自定义背景样式
-        return bannerBg
-      } else if (bannerBg.indexOf('.') > -1) { // 大图
-        return `background: url(${this.$withBase(bannerBg)}) center center / cover no-repeat`
-      }
-
-    },
-    homeData () {
-      return {
-        ...this.$page.frontmatter
-      }
-    },
-    actionLink () {
-      return {
-        link: this.homeData.actionLink,
-        text: this.homeData.actionText
-      };
-    }
-  }
 };
 </script>
 
@@ -377,11 +382,11 @@ export default {
           font-size 3.2rem
         .description, .action
           margin 1.5rem auto
-
         .description
+          max-width 40rem
           font-size 1.1rem
           line-height 1.3
-          opacity .9
+          opacity 0.9
         .action-button
           display inline-block
           font-size 1.2rem
@@ -423,17 +428,15 @@ export default {
             padding-bottom 0
           p
             opacity 0.8
-            padding 0 .8rem
+            padding 0 0.8rem
       .feature:hover
         .feature-img
-          animation-play-state: running
-        h2,p
+          animation-play-state running
+        h2, p
           color $accentColor
-
-
     // 移动端滑动图标
     .slide-banner
-      margin-top: 2rem;
+      margin-top 2rem
       .banner-wrapper
         position relative
       .slide-banner-scroll
@@ -459,7 +462,7 @@ export default {
               padding-bottom 0
             p
               opacity 0.8
-              padding 0 .8rem
+              padding 0 0.8rem
       .docs-wrapper
         position absolute
         bottom 25px
@@ -472,22 +475,19 @@ export default {
           height 8px
           border-radius 50%
           background var(--textColor)
-          opacity .9
+          opacity 0.9
           &.active
-            opacity .5
-
+            opacity 0.5
   // 分页不在第一页时，隐藏banner栏
-  .main-wrapper
-    margin-top 2rem
   .banner.hide-banner
     display none
     & + .main-wrapper
-       margin-top ($navbarHeight + .9rem)
-
+      margin-top ($navbarHeight + 0.9rem)
   .main-wrapper
+    margin-top 2rem
     .main-left
       .card-box
-        margin-bottom .9rem
+        margin-bottom 0.9rem
       .pagination
         margin-bottom 4rem
       .theme-vdoing-content
@@ -497,13 +497,17 @@ export default {
           padding-top 2rem
         &>:last-child
           padding-bottom 2rem
-
+    .main-right
+      .custom-html-box
+        padding: 0;
+        overflow: hidden;
 @keyframes heart
-  from{transform:translate(0,0)}
-  to{transform:translate(0,8px)}
-
+  from
+    transform translate(0, 0)
+  to
+    transform translate(0, 8px)
 // 1025px以下
-@media (max-width: 1025px)
+@media (max-width 1025px)
   .home-wrapper
     .banner
       .banner-conent
@@ -519,38 +523,33 @@ export default {
             .feature-img
               width 9rem
               height 9rem
-
 // 719px以下
-@media (max-width: $MQMobile)
+@media (max-width $MQMobile)
   .home-wrapper
     .banner
       .banner-conent
         .features
-          display none!important
-
+          display none !important
 // 419px以下
-@media (max-width: $MQMobileNarrow)
+@media (max-width $MQMobileNarrow)
   .home-wrapper
     .banner-conent
       padding-left 1.5rem
       padding-right 1.5rem
-
       .hero
         img
           max-height 210px
           margin 2rem auto 1.2rem
         h1
-          font-size: 2rem
+          font-size 2rem
         h1, .description, .action
-          margin: 1.2rem auto
-
+          margin 1.2rem auto
         .description
-          font-size: 1.2rem
-
+          font-size 1.2rem
         .action-button
           font-size 1rem
           padding 0.6rem 1.2rem
       .feature
         h2
-          font-size: 1.25rem
+          font-size 1.25rem
 </style>
