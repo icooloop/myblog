@@ -20,23 +20,22 @@ module.exports = {
   themeConfig: { // 主题配置
     nav:[
       { text: '首页', link: '/'},
-      { text: '前端基础', link: '/base/',
+      { text: '基础', link: '/base/',
         items: [
             {text: 'HTML', link: '/pages/fd29b6/'}, 
             {text: 'CSS', link: '/pages/48fd37/'}, 
             {text: 'JS', link: '/pages/9cf891/'},
             {text: '网络', link: '/pages/a45314/'},
-            {text: '读书笔记', link: '/pages/a453141/'},
         ]
       },
-      { text: '前端框架',link: '/framework/',
+      { text: '框架',link: '/framework/',
         items: [
           {text: 'Vue', link: '/pages/04224b/'}, 
           {text: 'React', link: '/pages/6c9200/'},
           {text: '泛客户端', link: '/pages/98fed5/'},
         ]
       },
-      { text: '前端进阶',link: '/advanced/',
+      { text: '进阶',link: '/advanced/',
         items: [
           {text: 'Node', link: '/pages/1280b2/'}, 
           {text: '工程化与构建', link: '/pages/a406b4/'},
@@ -46,12 +45,20 @@ module.exports = {
           {text: '其他', link: '/pages/7c4cf6/'},
         ]
       },
+      { text: '深入',link: '/depth/',
+        items: [
+            {text: '手写篇', link: '/pages/b11f45/'},
+            {text: '源码篇', link: '/pages/f91319/'},
+            {text: '面试篇', link: '/pages/aea6571b7a8bae86/'},
+        ]
+      },
       { text: '更多',link: '/more/',
         items: [
-          {text: '收藏', link: '/pages/8931cb/'},
-          {text: '学习', link: '/pages/f2a556/'}, 
-          {text: '面试', link: '/pages/aea6571b7a8bae86/'},
-          {text: '文档', link: '/pages/9a7ee40fc232253e/'},
+          {text: '收藏整理', link: '/pages/8931cb/'},
+          {text: '学习方法', link: '/pages/f2a556/'}, 
+          {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
+          {text: '项目总结', link: '/pages/1a6e53/'},
+          {text: '读书笔记', link: '/pages/a453141/'},
         ]
       },
       { text: '索引',link: '/archives/',
@@ -136,12 +143,13 @@ module.exports = {
     }
   },
   plugins: [ // 插件
-    // [require('./plugins/love-me'), { // 鼠标点击爱心特效
-    //   color: '#11a8cd', // 爱心颜色，默认随机色
-    //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
-    // }],
-
-    ['thirdparty-search', { // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
+    // 1. 鼠标点击爱心特效
+    [require('./plugins/love-me'), { 
+      color: '#11a8cd', // 爱心颜色，默认随机色
+      excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
+    }],
+    // 2. 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
+    ['thirdparty-search', { 
       thirdparty: [ // 可选，默认 []
         {
           title: '在MDN中搜索',
@@ -166,16 +174,17 @@ module.exports = {
         }
       ]
     }],
-
-    'vuepress-plugin-baidu-autopush', // 百度自动推送
-
-    ['one-click-copy', { // 代码块复制按钮
+    // 3. 百度自动推送
+    'vuepress-plugin-baidu-autopush', 
+    // 4. 代码块复制按钮
+    ['one-click-copy', { 
       copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
       copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
       duration: 1000, // prompt message display time.
       showInMobile: false // whether to display on the mobile side, default: false.
     }],
-    ['demo-block', { // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+    // 5. demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+    ['demo-block', { 
       settings: {
         // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
         // cssLib: ['http://xxx'], // 在线示例中的css依赖
@@ -185,8 +194,9 @@ module.exports = {
         horizontal: false // 是否展示为横向样式
       }
     }],
+    // 6. 放大图片
     [
-      'vuepress-plugin-zooming', // 放大图片
+      'vuepress-plugin-zooming', 
       {
         selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
         options: {
@@ -194,28 +204,30 @@ module.exports = {
         },
       },
     ],
+    // 7. 百度统计
     [
-      'vuepress-plugin-baidu-tongji', // 百度统计
+      'vuepress-plugin-baidu-tongji',
       {
         hm: '503f098e7e5b3a5b5d8c5fc2938af002'
       }
     ],
+    // 8. 评论功能 
     [
-      'vuepress-plugin-comment', // 评论
-      // {
-      //   choosen: 'valine',
-      //   options: {
-      //     el: '#valine-vuepress-comment',
-      //     appId: 'qnS1jobNF7CROIQ0XYWBnVOH-gzGzoHsz',
-      //     appKey: 'LIKa0ePqFMkglQfOkN0JNK6c',
-      //     avatar: 'monsterid'
-      //   }
-      // },
+      'vuepress-plugin-comment',
+    //   {
+    //     choosen: 'valine',
+    //     options: {
+    //       el: '#valine-vuepress-comment',
+    //       appId: 'qnS1jobNF7CROIQ0XYWBnVOH-gzGzoHsz',
+    //       appKey: 'LIKa0ePqFMkglQfOkN0JNK6c',
+    //       avatar: 'monsterid'
+    //     }
+    //   },
       {
         choosen: 'gitalk',
         options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
+          clientID: '16f2fd4bab1d3a8c7dd2',
+          clientSecret: '6744b5a8f7928144ca67af4f0acfb67d058a289b',
           repo: 'icooloop', // GitHub 仓库
           owner: 'icooloop', // GitHub仓库所有者
           admin: ['icooloop'], // 对仓库有写权限的人
@@ -228,8 +240,9 @@ module.exports = {
         }
       }
     ],
+     // 9."上次更新"时间格式
     [
-      '@vuepress/last-updated', // "上次更新"时间格式
+      '@vuepress/last-updated',
       {
         transformer: (timestamp, lang) => {
           const moment = require('moment') // https://momentjs.com/
