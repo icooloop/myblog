@@ -1,5 +1,5 @@
 module.exports = {
-  title: "子恒的前端精要",
+  title: "眼里有光",
   description: 'web前端技术博客,简洁至上,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github等技术文章。', // 描述,以 <meta> 标签渲染到页面html中
   port:'8888',
   // base: '/', // '/<github仓库名>/'， 默认'/'
@@ -59,6 +59,7 @@ module.exports = {
           {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
           {text: '项目总结', link: '/pages/1a6e53/'},
           {text: '读书笔记', link: '/pages/a453141/'},
+          {text: '友情链接', link: '/friends/' },
         ]
       },
       { text: '索引',link: '/archives/',
@@ -109,12 +110,12 @@ module.exports = {
     sidebar: 'structuring', // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
 
     author: { // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
-      name: '子恒', // 必需
+      name: '眼里有光', // 必需
       link: 'https://github.com/icooloop' // 可选的
     },
     blogger: { // 博主信息，显示在首页侧边栏
       avatar: '/img/logo.jpg',
-      name: '子恒',
+      name: '眼里有光',
       slogan: '前端摸索者'
     },
     social: { // 社交图标，显示于博主信息栏和页脚栏
