@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /img/web.png
-heroText: 眼里有光҉
+heroText: 眼里有光的笔记҉
 tagline: 道阻且长，行则将至
 # actionText: 立刻进入 →
 # actionLink: /web/

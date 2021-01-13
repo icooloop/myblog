@@ -1,5 +1,5 @@
 module.exports = {
-  title: "眼里有光",
+  title: "眼里有光的笔记",
   description: 'web前端技术博客,简洁至上,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github等技术文章。', // 描述,以 <meta> 标签渲染到页面html中
   port:'8888',
   // base: '/', // '/<github仓库名>/'， 默认'/'
@@ -45,21 +45,13 @@ module.exports = {
           {text: '其他', link: '/pages/7c4cf6/'},
         ]
       },
-      { text: '深入',link: '/depth/',
-        items: [
-            {text: '手写篇', link: '/pages/b11f45/'},
-            {text: '源码篇', link: '/pages/f91319/'},
-            {text: '架构篇', link: '/pages/c9013f/'},
-            {text: '项目篇', link: '/pages/1a6e53/'},
-            {text: '面试篇', link: '/pages/aea6571b7a8bae86/'},
-        ]
-      },
       { text: '更多',link: '/more/',
         items: [
           {text: '收藏整理', link: '/pages/8931cb/'},
           {text: '学习方法', link: '/pages/f2a556/'}, 
           {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
           {text: '读书笔记', link: '/pages/a453141/'},
+          {text: '面试总结', link: '/pages/aea6571b7a8bae86/'},
           {text: '友情链接', link: '/friends/' },
         ]
       },
